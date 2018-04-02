@@ -1,0 +1,86 @@
+\documentclass[pdf]{beamer}
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage[style=verbose,backend=biber]{biblatex}
+
+% Set theme
+\usetheme{CambridgeUS}
+
+% Set indent width
+\setlength{\parindent}{1cm}
+
+% Display the tableofcontents before a section
+\AtBeginSection[]
+{
+    \begin{frame}<beamer>
+        \frametitle{Agenda}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+%Global Background must be put in preamble
+% \usebackgroundtemplate{
+%     \includegraphics[width=2cm]{images/background.png}%
+% }
+
+% Add source of bibliography
+\addbibresource{slide.bib}
+
+% Title
+\title{Title of this Slide}
+\author{Author name}
+\titlegraphic{
+	% adjust logo position
+	\vspace{-6cm}
+	\includegraphics[width=1.5cm]{images/logohust.png}
+	% adjust logo horizontal spacing
+	\hspace*{7cm}
+	\includegraphics[width=1.5cm]{images/logosoict.png}
+	% adjust title position
+	\vspace{4cm}
+}
+
+% Main contents
+\begin{document}
+
+	\begin{frame}
+	    \titlepage
+	\end{frame}
+
+	\begin{frame}
+	    \frametitle{Outline}
+	    \tableofcontents
+	\end{frame}
+
+
+	\section{The First Section}
+	\begin{frame}{The First Section}
+		\begin{itemize}
+		\item item 1
+		\item item 2
+		\item item 3
+		\end{itemize}
+	\end{frame}
+
+	\section{The Second Section}
+	\begin{frame}{The Second Section}
+		\begin{itemize}
+		\item item 1
+		\item item 2
+		\item item 3
+		\end{itemize}
+	\end{frame}
+
+	\section{The Third Section}
+	\begin{frame}{The Third Section}
+		\begin{itemize}
+		\item item 1
+		\item item 2
+		\item item 3
+		\end{itemize}
+	\end{frame}
+
+\end{document}
