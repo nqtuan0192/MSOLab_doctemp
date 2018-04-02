@@ -1,0 +1,136 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+ \geometry{
+	a4paper,
+	left=30mm,
+	right=20mm,
+	top=25mm,
+	bottom=20mm,
+}
+
+\usepackage{blindtext} % to quickly get a full document
+
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[sorting=none,backend=biber]{biblatex}
+\usepackage{amsmath,algorithm,algorithmicx,amsthm}
+\usepackage[noend]{algpseudocode}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage{datetime}
+\usepackage{multicol,xparse}
+
+\newdateformat{monthyeardate}{\monthname[\THEMONTH], \THEYEAR}
+
+
+\addbibresource{report.bib}
+
+
+\title{Computational Intelligent Society scholarship proposal}
+\author{Nguyen Quoc Tuan}
+
+\begin{document}
+
+% coverpage	beg
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+	
+	\center % Centre everything on the page
+	
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+	
+	\textsc{\LARGE Hanoi University of Science and Technology}\\[1.5cm] % Main heading such as the name of your university/college
+	\includegraphics[width=2cm]{images/logohust.png}\\[5cm]
+	
+	\textsc{\Large School of Information and Communication Technology}\\[0.5cm] % Major heading such as course name
+	
+	\textsc{\large Modelling, Simulation and Optimization Lab}\\[0.5cm] % Minor heading such as course title
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\HRule\\[0.4cm]
+	
+	{\huge\bfseries Academic Report Title}\\[0.4cm] % Title of your document
+	
+	\HRule\\[1.5cm]
+	
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{Author}\\
+			Author's name
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+			\textit{Supervisor}\\
+			Supervisor's name
+		\end{flushright}
+	\end{minipage}
+	
+	\vfill
+	
+	{\large\today} % Date, change the \today to a set date if you want to be precise
+\end{titlepage}
+% coverpage end
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+
+
+% Main content
+\section{Section 1}
+\blindtext
+\subsection{Sub 1}
+\blindtext
+\subsection{Sub 2}
+\blindtext
+\subsection{Sub 3}
+\blindtext
+
+\section{Section 2}
+\blindtext
+\subsection{Sub 1}
+\blindtext
+\subsection{Sub 2}
+\blindtext
+\subsection{Sub 3}
+\blindtext
+
+\section{Section 3}
+\blindtext
+\subsection{Sub 1}
+\blindtext
+\subsection{Sub 2}
+\blindtext
+\subsection{Sub 3}
+\blindtext
+
+% bibliography beg
+\newpage
+% \addtocounter{section}{1}
+\addcontentsline{toc}{section}{\protect\numberline{}References}
+\printbibliography
+% bibliography end
+
+\end{document}
