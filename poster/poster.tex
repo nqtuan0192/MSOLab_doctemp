@@ -1,0 +1,120 @@
+\documentclass[a0paper,portrait]{baposter}
+
+% unicode support
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% bibliography
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{wrapfig}
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\selectcolormodel{cmyk}
+
+% Directory in which figures are stored
+\graphicspath{{images/}}
+
+
+\newcommand{\compresslist}{
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{1pt}
+\setlength{\parsep}{0pt}
+}
+
+\newenvironment{boenumerate}
+  {\begin{enumerate}\renewcommand\labelenumi{\textbf\theenumi.}}
+  {\end{enumerate}}
+
+
+
+\begin{document}
+
+% blue theme
+%\definecolor{darkblue}{cmyk}{0.8,0.8,0.0,0.0}
+%\definecolor{lightblue}{cmyk}{0.8,0.6,0.0,0.0}
+
+% red theme
+\definecolor{darkblue}{cmyk}{0.0,1.0,0.9,0.0}
+\definecolor{lightblue}{cmyk}{0.0,0.9,0.7,0.0}
+
+\begin{poster}
+{
+grid=false,
+headerborder=open, % Adds a border around the header of content boxes
+colspacing=1em, % Column spacing
+bgColorOne=white, % Background color for the gradient on the left side of the poster
+bgColorTwo=white, % Background color for the gradient on the right side of the poster
+borderColor=darkblue, % Border color
+headerColorOne=lightblue, % Background color for the header in the content boxes (left side)
+headerColorTwo=lightblue, % Background color for the header in the content boxes (right side)
+headerFontColor=white, % Text color for the header text in the content boxes
+boxColorOne=white, % Background color of the content boxes
+textborder=rectangle, %rectangle, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
+eyecatcher=false, % Set to false for ignoring the left logo in the title and move the title left
+headerheight=0.11\textheight, % Height of the header
+headershape=rectangle, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
+headershade=plain,
+headerfont=\Large\textsf, % Large, bold and sans serif font in the headers of content boxes
+%textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
+linewidth=2pt % Width of the border lines around content boxes
+}
+
+% blank line
+{\textbf{}} 
+
+% header bk
+{\includegraphics[scale=0.4905]{headerbk.png}} 
+
+\headerbox{Title}{name=title, column=0, row=0, span=3, textborder=none,headerborder=none,boxheaderheight=0pt}{
+\begin{center}
+\Huge{\textbf{\color{red} POSTER TITLE}}
+\end{center}
+}
+
+
+\headerbox{Author Names and Affiliations}{name=authors, column=0, below=title, span=1}{
+\textbf{Nguyen Quoc Tuan} \\
+\emph{Modelling, Simulation and Optimization Lab} \\
+}
+
+
+\headerbox{Abstract}{name=abstract, column=1, below=title, span=2}{
+Write abstract here
+}
+
+\headerbox{Section 1}{name=section1, span=3, column=0, below=authors}{
+Write section 1 here
+}
+
+\headerbox{Section 2}{name=section2, span=3, column=0, below=section1}{
+Write section 2 here
+}
+
+\headerbox{Section 3}{name=section3, span=3, column=0, below=section2}{
+Write section 3 here
+}
+
+\headerbox{Experimental results}{name=results, span=2, column=0, below=section3}{
+Continue
+}
+
+\headerbox{Future works}{name=future, span=1, column=2, below=section3}{
+Continue
+}
+
+
+\headerbox{References}{name=references, column=0, span=3, below=results}{
+\nocite{*}
+\printbibliography[heading=none,title=none]
+}
+
+% footer bk
+{\includegraphics[scale=0.4905]{footerbk.png}} 
+
+\end{poster}
+
+\end{document}
